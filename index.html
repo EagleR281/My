@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .welcome-box {
+            background-color: rgba(10, 2, 17, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            box-shadow: 0px 0px 50px rgb(1, 32, 28);
+            max-width: 400px; /* أقصى عرض للمستطيل */
+            font-family: Arial, sans-serif;
+            color: #4e4a4a;
+            position: absolute;
+            bottom: -300px; /* بدءًا من خارج الشاشة بالكامل */
+            transition: bottom 1s ease; /* تأثير الانتقال */
+            padding-left: 60px; /* لإضافة مسافة للصورة */
+        }
+
+        .welcome-box.visible {
+            bottom: 50%; /* المركز العمودي عند الظهور */
+            transform: translateY(50%); /* لضبط الموقع عند الظهور */
+        }
+
+        .welcome-box a {
+            color: #740c34; /* لون الرابط */
+            text-decoration: none; /* إزالة التسطير من الرابط */
+        }
+
+        .welcome-box a:hover {
+            text-decoration: underline; /* إضافة تسطير عند التمرير على الرابط */
+        }
+
+        .profile-image {
+            position: absolute;
+            top: 10px; /* المسافة من الأعلى */
+            left: 10px; /* المسافة من اليسار */
+            width: 40px; /* عرض الصورة */
+            height: 40px; /* ارتفاع الصورة */
+            border-radius: 50%; /* لجعل الصورة دائرية */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* ظل للصورة */
+        }
+    </style>
+</head>
+<body>
+
+<iframe 
+    src="https://www.youtube.com/embed/FXnA9JimMMg?autoplay=1&controls=0&mute=0&loop=1&playlist=FXnA9JimMMg" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen 
+    style="position: absolute; width: 1px; height: 1px; opacity: 0;">
+</iframe>
+
+<div class="welcome-box" id="welcomeBox">
+    <img src="https://cdn.discordapp.com/attachments/1205297616783417405/1295837881721552916/11zon_cropped_4.png?ex=67101a92&is=670ec912&hm=4fad3010a37cee1d770977c8a761a7fbcf2c2b573a616b1d60b8bd2fa2306137&" alt="Profile" class="profile-image"> <!-- صورة الشخص -->
+    <h2>Welcome,</h2>
+    <p>I am Khaled, 17 years old.</p>
+    <p>I love programming games and I love programming FiveM scripts.</p>
+    <p>I also have experience in creating web applications 😁</p>
+    <p>I welcome you all to Discord <a href="https://discord.gg/jh4Qtzp8rd" target="_blank">here</a></p>
+</div>
+
+<script>
+    window.onload = function() {
+        // الانتظار لمدة 1 ثانية قبل عرض الرسالة
+        setTimeout(() => {
+            const welcomeBox = document.getElementById('welcomeBox');
+            welcomeBox.classList.add('visible');
+        }, 1000); // 1000 مللي ثانية = 1 ثانية
+    };
+</script>
+
+</body>
+</html>
